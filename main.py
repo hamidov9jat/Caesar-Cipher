@@ -1,5 +1,7 @@
-from utility import prompt_user, encrypt, decrypt, caesar
+from utility import prompt_user, caesar
 from art import logo
+
+print(logo)
 
 while True:
     direction, text, shift = prompt_user()
@@ -11,4 +13,3 @@ while True:
         continue
     else:
         break
-
