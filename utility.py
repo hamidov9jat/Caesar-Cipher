@@ -41,4 +41,5 @@ def decrypt(encrypted_text, shift):
 
 
 if __name__ == '__main__':
-    pass
+    print(encrypt('abc', 1))
+    print(decrypt('abc', 1))
