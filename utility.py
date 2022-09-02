@@ -40,6 +40,15 @@ def decrypt(encrypted_text, shift):
     return decrypted_text
 
 
+def caesar(text, shift, direction):
+    if direction == 'encode':
+        encrypted_text = encrypt(text, shift)
+        print(f'The encoded text is {encrypted_text}')
+    elif direction == 'decode':
+        decrypted_text = decrypt(text, shift)
+        print(f'The decoded text is {decrypted_text}')
+
+
 if __name__ == '__main__':
     print(encrypt('abc', 1))
     print(decrypt('abc', 1))
