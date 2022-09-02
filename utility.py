@@ -5,7 +5,12 @@ alphabet = dict(zip(ascii_lowercase, range(NUM_OF_LETTERS)))
 
 
 def prompt_user():
+
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+
+    while direction not in {'encode', 'decode'}:
+        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
 
