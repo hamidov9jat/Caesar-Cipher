@@ -25,6 +25,20 @@ def encrypt(text, shift):
 
     return encrypted_text
 
+def decrypt(encrypted_text, shift):
+    decrypted_text = ''
+
+    for character in encrypted_text:
+        if str.isalpha():
+            index_of_changed = (alphabet[character] - shift) % NUM_OF_LETTERS
+            decrypted_character = ascii_lowercase[index_of_changed]
+            decrypted_text += decrypted_character
+        else:
+            decrypted_text += character
+
+    return decrypted_text
+
+
 
 
 if __name__ == '__main__':
